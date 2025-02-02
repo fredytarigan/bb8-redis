@@ -1,0 +1,22 @@
+[workspace]
+resolver = "2"
+members = ["redis-cluster-async"]
+
+[workspace.package]
+edition = "2021"
+rust-version = "1.84"
+license = "MIT"
+version = "1.0.0-alpha.1"
+authors = [
+    "Fredy Samuel B Tarigan <fredy@tarigan.id>"
+]
+description = "bb8 implementation for redis connection manager"
+documentation = "https://github.com/fredytarigan/bb8-redis"
+
+[workspace.lints.rust]
+unsafe_code = "forbid"
+
+[profile.release]
+strip = true
+lto = true
+codegen-units = 1
